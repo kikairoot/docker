@@ -11,12 +11,37 @@ https://www.youtube.com/watch?v=6kCZJLZBVpQ
 
 
 ## イメージ作成
-###イメージ一覧確認
+### イメージ一覧確認
 コマンドプロンプトを起動して以下を実行する
 ```
 docker image ls
 ```
 もしくは、docker desktopのイメージ一覧から確認する
+
+### busyboxでunixコマンド実行
+WindowsからとりあえずUnixコマンドを実行したい場合に便利なbusyboxを使ってみる
+
+-ダウンロード
+```
+docker pull busybox
+```
+-実行
+```
+docker run echo "hello world"
+docker run sh
+
+# ls
+# echo hello world
+# exit
+```
+
+### 使った後のお片付け
+runした後にコンテナが残っているので、必要なければ削除を行う
+```
+docker ps -a
+docker rm (container id)
+```
+
 
 
 -参考資料
