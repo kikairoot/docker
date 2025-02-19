@@ -25,15 +25,17 @@ WindowsからとりあえずUnixコマンドを実行したい場合に便利な
 ```
 docker pull busybox
 ```
+
 -実行
 ```
-docker run echo "hello world"
-docker run sh
+docker run busybox echo "hello world"
+docker run busybox sh
 
 # ls
 # echo hello world
 # exit
 ```
+上のダウンロードを行わなくても、イメージがローカルにない場合は勝手にダウンロードして実行してくれるみたい
 
 ### 使った後のお片付け
 runした後にコンテナが残っているので、必要なければ削除を行う
