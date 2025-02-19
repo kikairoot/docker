@@ -52,11 +52,10 @@ docker run -d -P --name static-site prakhar1989/static-site
 ```
 上のものを実行すると、http://localhost:32769/ にテストページとしてアクセスできる。
 
-### バックグラウンド実行
-バックグラウンドで実行（コンテナのデーモン実行など）をするときは -d
-起動ポートの指定は-P（ランダムポート）もしくは-Pに続いてポートを指定する
+### イメージ作成のためにDockerfile作成
+
 ```
-docker run -d -P --name static-site prakhar1989/static-site
+docker build -t test-build/catnip
 ```
 
 
