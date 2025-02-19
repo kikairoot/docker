@@ -6,7 +6,7 @@ WSL2のdocker desktopをダウンロードしインストール
 
 ## 基本概念
 
--参考資料
+- 参考資料
 https://www.youtube.com/watch?v=6kCZJLZBVpQ
 
 
@@ -21,12 +21,12 @@ docker image ls
 ### busyboxでunixコマンド実行
 WindowsからとりあえずUnixコマンドを実行したい場合に便利なbusyboxを使ってみる
 
--ダウンロード
+- ダウンロード
 ```
 docker pull busybox
 ```
 
--実行
+- 実行
 ```
 docker run busybox echo "hello world"
 docker run busybox sh
@@ -44,7 +44,23 @@ docker ps -a
 docker rm (container id)
 ```
 
+### バックグラウンド実行
+バックグラウンドで実行（コンテナのデーモン実行など）をするときは -d
+起動ポートの指定は-P（ランダムポート）もしくは-Pに続いてポートを指定する
+```
+docker run -d -P --name static-site prakhar1989/static-site
+```
+上のものを実行すると、http://localhost:32769/ にテストページとしてアクセスできる。
+
+### バックグラウンド実行
+バックグラウンドで実行（コンテナのデーモン実行など）をするときは -d
+起動ポートの指定は-P（ランダムポート）もしくは-Pに続いてポートを指定する
+```
+docker run -d -P --name static-site prakhar1989/static-site
+```
 
 
--参考資料
+
+
+- 参考資料
 https://qiita.com/irico/items/4677334879da859a7c24
